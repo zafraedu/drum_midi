@@ -1,3 +1,4 @@
+//funciones
 function tocaSomPom() {
   document.querySelector("#som_tecla_pom").play();
 }
@@ -26,6 +27,7 @@ function tocaSomTom() {
   document.querySelector("#som_tecla_tom").play();
 }
 
+//teclas
 const teclaPom = document.querySelector(".tecla_pom");
 teclaPom.onclick = function () {
   tocaSomPom();
@@ -62,10 +64,41 @@ teclaPsh.onclick = function () {
 
 const teclaTic = document.querySelector(".tecla_tic");
 teclaTic.onclick = function () {
-  tocaSomTim();
+  tocaSomTic();
 };
 
 const teclaTom = document.querySelector(".tecla_tom");
 teclaTom.onclick = function () {
   tocaSomTom();
+};
+
+//teclado
+window.onkeypress = function (e) {
+  if (e.code == "KeyU") {
+    tocaSomPom();
+  }
+  if (e.code == "KeyI") {
+    tocaSomClap();
+  }
+  if (e.code == "KeyO") {
+    tocaSomTim();
+  }
+  if (e.code == "KeyJ") {
+    tocaSomPuff();
+  }
+  if (e.code == "KeyK") {
+    tocaSomSplash();
+  }
+  if (e.code == "KeyL") {
+    tocaSomToim();
+  }
+  if (e.code == "KeyM") {
+    tocaSomPsh();
+  }
+  if (e.code == "Comma") {
+    tocaSomTic();
+  }
+  if (e.code == "Period") {
+    tocaSomTom();
+  }
 };
